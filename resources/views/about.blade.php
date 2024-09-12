@@ -9,6 +9,8 @@
 <body>
     <a href="/">Home</a>
     <a href="/about">About</a>
+    <a href="/blog">Blog</a>
+    <a href="/contact">Contact</a>
     <h1>Halaman about</h1>
     <h3>{{ $name }}</h3>
     <img src="img/mantap.png" alt="Gambar about">
