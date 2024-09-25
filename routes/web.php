@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 
@@ -12,58 +13,12 @@ Route::get('/about', function () {
 });
 
 Route::get('/posts', function () {
-    return view('posts', ['title' => 'Blog', 'posts' => [
-            [
-                'id' => 1,
-                'slug' => 'post-title-1',
-                'title' => 'Post Title 1',
-                'author' => 'Author 1',
-                'body' => 'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate. Quisquam, voluptate.'
-            ],
-            [
-                'id' => 2,
-                'slug' => 'post-title-2',
-                'title' => 'Post Title 2',
-                'author' => 'Author 2',
-                'body' => 'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate. Quisquam, voluptate.'
-            ],
-            [
-                'id' => 3,
-                'slug' => 'post-title-3',
-                'title' => 'Post Title 3',
-                'author' => 'Author 3',
-                'body' => 'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate. Quisquam, voluptate.'
-            ]
-        ]
-    ]);
+    return view('posts', ['title' => 'Blog', 'posts' => Post::all()]);
 });
 
 Route::get('/posts/{slug}', function ($slug) {
-    $posts = [[
-        'id' => 1,
-        'slug' => 'post-title-1',
-        'title' => 'Post Title 1',
-        'author' => 'Author 1',
-        'body' => 'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate. Quisquam, voluptate.'
-    ],
-    [
-        'id' => 2,
-        'slug' => 'post-title-2',
-        'title' => 'Post Title 2',
-        'author' => 'Author 2',
-        'body' => 'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate. Quisquam, voluptate.'
-    ],
-    [
-        'id' => 3,
-        'slug' => 'post-title-3',
-        'title' => 'Post Title 3',
-        'author' => 'Author 3',
-        'body' => 'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate. Quisquam, voluptate.'
-    ]];
 
-    $post = Arr::first($posts, function($post) use ($slug){
-        return $post['slug'] == $slug;
-    });
+    $post = Post::find($slug);
 
     return view('post', ['title' => 'Post', 'post' => $post]);
 });
