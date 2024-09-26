@@ -1,5 +1,4 @@
-# Laravel 11 Project - Belajar dari EB Programming (Unpas)
-
+# Laravel 11 Project
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -11,7 +10,7 @@
 
 Selamat datang di repository ini! Dalam project ini, kita akan mempelajari **Laravel 11** berdasarkan tutorial dari [Web Programming Unpas](https://www.youtube.com/@sandhikagalihWPU/featured).
 
-## 🎥 Link Video Tutorial EB Programming (Unpas)
+## 🎥 Link Video Tutorial Web Programming Unpas
 
 > Tonton video lengkapnya di sini: [Belajar Laravel 11](https://www.youtube.com/watch?v=T1TR-RGf2Pw&list=PLFIM0718LjIW1Xb7cVj7LdAr32ATDQMdr&pp=iAQB)  
 > Props to Pak Sandhika 😎🙌
@@ -19,40 +18,6 @@ Selamat datang di repository ini! Dalam project ini, kita akan mempelajari **Lar
 ## 📖 Laporan Sejauh ini
 
 ## 📝 Laporan Minggu ini
-
-## 🚀 Setup Project Laravel 11
-
-Untuk menjalankan project ini di mesin lokal, ikuti langkah-langkah berikut:
-
-1. Clone repository ini:
-   ```bash
-   git clone https://github.com/username/repo-laravel11.git
-   ```
-2. Masuk ke direktori project:
-   ```bash
-   cd repo-laravel11
-   ```
-3. Install dependencies:
-   ```bash
-   composer install
-   npm install
-   ```
-4. Salin file `.env.example` menjadi `.env`:
-   ```bash
-   cp .env.example .env
-   ```
-5. Generate application key:
-   ```bash
-   php artisan key:generate
-   ```
-6. Jalankan migration untuk membuat tabel di database:
-   ```bash
-   php artisan migrate
-   ```
-7. Jalankan server lokal:
-   ```bash
-   php artisan serve
-   ```
 
 ## 💡 Referensi
 
